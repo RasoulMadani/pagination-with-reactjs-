@@ -1,0 +1,5 @@
+ pnpm create vite@latest
+
+ Project name: … client-paging
+✔ Select a framework: › React
+✔ Select a variant: › JavaScript
