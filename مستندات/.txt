@@ -3,3 +3,5 @@
  Project name: … client-paging
 ✔ Select a framework: › React
 ✔ Select a variant: › JavaScript
+
+pnpm add lodash
