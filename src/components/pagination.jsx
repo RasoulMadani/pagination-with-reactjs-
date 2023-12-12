@@ -9,6 +9,16 @@ const Pagination = ({ pages, setPage, activePage }) => {
       return prevPage;
     });
   };
+
+  const nextPage = () => {
+    setPage((oldPage) => {
+      let nextPage = oldPage + 1;
+      if (nextPage > pages) {
+        nextPage = 1;
+      }
+      return nextPage;
+    });
+  };
   return (
     <nav>
       <ul className="pagination d-flex justify-content-center mt-5" dir="rtl">
@@ -28,7 +38,7 @@ const Pagination = ({ pages, setPage, activePage }) => {
             </a>
           </li>
         ))}
-        <li className="page-item">
+        <li className="page-item" onClick={nextPage}>
           <a href="#" className="page-link">
             بعدی
           </a>
