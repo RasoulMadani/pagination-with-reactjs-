@@ -1,9 +1,18 @@
 import _ from "lodash";
 const Pagination = ({ pages, setPage, activePage }) => {
+  const prevPage = () => {
+    setPage((oldPage) => {
+      let prevPage = oldPage - 1;
+      if (prevPage < 1) {
+        prevPage = pages;
+      }
+      return prevPage;
+    });
+  };
   return (
     <nav>
       <ul className="pagination d-flex justify-content-center mt-5" dir="rtl">
-        <li className="page-item">
+        <li className="page-item" onClick={prevPage}>
           <a href="#" className="page-link">
             قبلی
           </a>
